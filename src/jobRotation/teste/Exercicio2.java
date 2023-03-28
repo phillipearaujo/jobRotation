@@ -6,44 +6,45 @@ import java.util.Scanner;
 public class Exercicio2 {
 
 	/*
-	 * Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor
-	 * sempre será a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8,
+	 * Dado a sequï¿½ncia de Fibonacci, onde se inicia por 0 e 1 e o prï¿½ximo valor
+	 * sempre serï¿½ a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8,
 	 * 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado
-	 * um número, ele calcule a sequência de Fibonacci e retorne uma mensagem
-	 * avisando se o número informado pertence ou não a sequência.
+	 * um nï¿½mero, ele calcule a sequï¿½ncia de Fibonacci e retorne uma mensagem
+	 * avisando se o nï¿½mero informado pertence ou nï¿½o a sequï¿½ncia.
 	 * 
 	 * IMPORTANTE:
 	 * 
-	 * Esse número pode ser informado através de qualquer entrada de sua preferência
-	 * ou pode ser previamente definido no código;
+	 * Esse nï¿½mero pode ser informado atravï¿½s de qualquer entrada de sua preferï¿½ncia
+	 * ou pode ser previamente definido no cï¿½digo;
+	 * 
 	 */
 
 	public static void main(String[] args) {
 
 		Scanner in = new Scanner(System.in);
 
-		System.out.print("Digite um número: ");
+		System.out.print("Digite um nÃºmero: ");
 		int numb = in.nextInt();
 
 		int a = 0, b = 1;
 		ArrayList<Integer> fibonacci = new ArrayList<>();
 		fibonacci.add(a);
 		fibonacci.add(b);
-		
+
 		for (int i = 1; fibonacci.get(i) < numb; i++) {
-            int proximo = a + b;
-            fibonacci.add(proximo);
-            a = b;
-            b = proximo;
-            System.out.println(proximo);
-        }
-		
+			int proximo = a + b;
+			fibonacci.add(proximo);
+			a = b;
+			b = proximo;
+			System.out.println(proximo);
+		}
+
 		if (fibonacci.contains(numb)) {
-            System.out.printf("O número %d pertence à sequência de Fibonacci.%n", numb);
-        } else {
-            System.out.printf("O número %d não pertence à sequência de Fibonacci.%n", numb);
-        }
-		
+			System.out.printf("O nÃºmero %d pertence a sequencia de Fibonacci.%n", numb);
+		} else {
+			System.out.printf("O nÃºmero %d nÃ£o pertence a sequencia de Fibonacci.%n", numb);
+		}
+
 		in.close();
 	}
 }
